@@ -1,0 +1,86 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: #ffffff;
+  color: #1a1a1a;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+#bubble-canvas,
+#photo-canvas,
+#rice-canvas,
+#ink-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+#bubble-canvas {
+  z-index: 0;
+}
+
+#photo-canvas {
+  z-index: 1;
+}
+
+#rice-canvas {
+  z-index: 2;
+}
+
+#ink-canvas {
+  z-index: 3;
+}
+
+.page {
+  position: relative;
+  z-index: 2;
+  min-height: 500vh;
+}
+
+.panel {
+  min-height: 125vh;
+}
+
+.scroll-hint {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 7vh;
+  z-index: 4;
+  margin: 0;
+  text-align: center;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: rgba(46, 72, 40, 0.55);
+  pointer-events: none;
+  transition: opacity 0.45s ease;
+}
+
+.scroll-hint.is-hidden {
+  opacity: 0;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
