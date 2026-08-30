@@ -2,7 +2,7 @@
   const canvas = document.getElementById("bubble-canvas");
   const ctx = canvas.getContext("2d");
   const hint = document.getElementById("scroll-hint");
-  const FONT = '"Snell Roundhand", "Apple Chancery", "Segoe Script", "Brush Script MT", Georgia, cursive';
+  const FONT = '"Great Vibes", "Snell Roundhand", "Apple Chancery", "Segoe Script", "Brush Script MT", Georgia, cursive';
 
   const GREENS = [
     [186, 214, 140],

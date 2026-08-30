@@ -2,7 +2,7 @@
   const canvas = document.getElementById("rice-canvas");
   const ctx = canvas.getContext("2d");
 
-  const FONT = '"Snell Roundhand", "Apple Chancery", "Segoe Script", "Brush Script MT", Georgia, cursive';
+  const FONT = '"Great Vibes", "Snell Roundhand", "Apple Chancery", "Segoe Script", "Brush Script MT", Georgia, cursive';
   const INK = "#1c120c";
   const INK_EDGE = "rgba(247, 236, 208, 0.95)";
 
@@ -177,5 +177,8 @@
     { passive: true }
   );
   window.addEventListener("resize", resize);
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(paint);
+  }
   resize();
 })();
